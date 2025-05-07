@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Job Listings Platform</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .hero-bg {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+      color: #fff;
+      min-height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+    .job-logo {
+      width: 48px;
+      height: 48px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-right: 1rem;
+    }
+    .job-tag {
+      background: #e9ecef;
+      color: #495057;
+      border-radius: 12px;
+      font-size: 0.85rem;
+      padding: 0.2rem 0.75rem;
+      margin-left: 0.5rem;
+    }
+    .footer-social {
+      font-size: 1.5rem;
+      margin: 0 0.5rem;
+      color: #fff;
+      transition: color 0.2s;
+    }
+    .footer-social:hover { color: #0d6efd; }
+    .footer-social-group {
+      margin-bottom: 1rem;
+    }
+    .footer-social-square {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.2s;
+    }
+    .footer-social-square:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">Local Jobs</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="post-job.html">Post a Job</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-bg mb-4">
+    <h1 class="display-4 fw-bold">Find Your Next Opportunity</h1>
+    <p class="lead mb-4">Discover local jobs and connect with top employers in your community.</p>
+    <a href="post-job.html" class="btn btn-primary btn-lg">Post a Job</a>
+  </header>
+
+  <!-- Search Bar -->
+  <div class="container mb-4">
+    <form class="row g-2 justify-content-center">
+      <div class="col-md-4">
+        <input type="text" class="form-control" placeholder="Search jobs, companies, or keywords...">
+      </div>
+      <div class="col-md-3">
+        <select class="form-select">
+          <option selected>All Locations</option>
+          <option>Downtown</option>
+          <option>Suburbs</option>
+          <option>Eastside</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <button type="submit" class="btn btn-outline-primary w-100">Search</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Job Listings Section -->
+  <div class="container mb-5">
+    <h2 class="mb-4">Latest Job Listings</h2>
+    <div class="row" id="job-listings">
+      <!-- Job Card 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 p-2">
+          <div class="d-flex align-items-center mb-2">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Company Logo" class="job-logo">
+            <div>
+              <h5 class="card-title mb-0">Retail Assistant <span class="job-tag">Part-time</span></h5>
+              <small class="text-muted">Local Supermarket - Downtown</small>
+            </div>
+          </div>
+          <div class="card-body pt-2 pb-1">
+            <p class="card-text">Assist customers, stock shelves, and maintain store cleanliness. Flexible hours available.</p>
+            <a href="job-details.html" class="btn btn-outline-primary btn-sm">View Details</a>
+          </div>
+        </div>
+      </div>
+      <!-- Job Card 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 p-2">
+          <div class="d-flex align-items-center mb-2">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Company Logo" class="job-logo">
+            <div>
+              <h5 class="card-title mb-0">Delivery Driver <span class="job-tag">Full-time</span></h5>
+              <small class="text-muted">QuickShip Couriers - Suburbs</small>
+            </div>
+          </div>
+          <div class="card-body pt-2 pb-1">
+            <p class="card-text">Deliver packages locally. Must have a valid driver's license and good driving record.</p>
+            <a href="job-details.html" class="btn btn-outline-primary btn-sm">View Details</a>
+          </div>
+        </div>
+      </div>
+      <!-- Job Card 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 p-2">
+          <div class="d-flex align-items-center mb-2">
+            <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Company Logo" class="job-logo">
+            <div>
+              <h5 class="card-title mb-0">Part-time Tutor <span class="job-tag">Remote</span></h5>
+              <small class="text-muted">Community Center - Eastside</small>
+            </div>
+          </div>
+          <div class="card-body pt-2 pb-1">
+            <p class="card-text">Tutor students in math and science. Sessions are held online. Experience required.</p>
+            <a href="job-details.html" class="btn btn-outline-primary btn-sm">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <div class="footer-social-group d-flex justify-content-center mb-2">
+        <a href="https://x.com" target="_blank" class="footer-social-square mx-2"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://instagram.com" target="_blank" class="footer-social-square mx-2"><i class="bi bi-instagram"></i></a>
+        <a href="https://facebook.com" target="_blank" class="footer-social-square mx-2"><i class="bi bi-facebook"></i></a>
+        <a href="https://linkedin.com" target="_blank" class="footer-social-square mx-2"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <small>&copy; 2024 Local Job Listings Platform &mdash; <a href="about.html" class="text-white text-decoration-underline">About</a></small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html> 
